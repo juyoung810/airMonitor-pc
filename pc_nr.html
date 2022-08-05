@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>실외 공기질 모니터</title>
+
+  <!-- style -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/circle.css" />
+  <link rel="stylesheet" href="./css/state.css" />
+
+  <!-- 웹 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      <section id="section01">
+        <!-- 위치, 시간 정보 -->
+        <div class="now-info">
+          <h1>서울 특별시 종로구</h1>
+          <div class="time">2022.03.11.FRI AM 11:50</div>
+        </div>
+        <!-- // 위치, 시간 정보 -->
+        <!-- 날씨 정보 -->
+        <div class="weather-info">
+          <div class="w-icon">
+            <span class="ir_su">날씨 이모지</span>
+          </div>
+          <p>흐림</p>
+          <div class="w-num">16°C</div>
+        </div>
+        <!-- //날씨 정보 -->
+        <!-- 공기 상세 정보 -->
+        <div class="air-info">
+          <h4 class="ir_su">공기 정보</h4>
+          <ul>
+            <li class="pc-bg-blue">
+              <div class="grad">
+                <div class="air-name">미세먼지<span>PM10</span></div>
+                <div class="air-de air-state">좋음</div>
+                <div class="air-denum air-state-num font-blue">47</div>
+              </div>
+            </li>
+            <li class="pc-bg-red last">
+              <div class="grad">
+                <div class="air-name">초미세먼지<span>PM2.5</span></div>
+                <div class="air-de">매우나쁨</div>
+                <div class="air-denum font-red">38</div>
+              </div>
+            </li>
+            <li class="pc-bg-green">
+              <div class="grad">
+                <div class="air-name">
+                  이산화탄소 <span>CO2</span>
+                </div>
+                <div class="air-de">보통</div>
+                <div class="air-denum font-green">415</div>
+              </div>
+            </li>
+            <li class="pc-bg-black last">
+              <div class="grad">
+                <div class="air-name">습도<span><br></span></div>
+                <div class="air-de">56.1</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- // 공기 상세 정보 -->
+      </section>
+      <main>
+        <section id="section02">
+          <!-- 학년 반 선택 -->
+          <div class="selectClass">
+            <h2>서울 초등학교</h2>
+            <div class="dropdown-layer">
+              <!-- 학년 선택 드롭 박스 -->
+              <div class="dropdown level">
+                <a href="#" class="drop-btn">
+                  <span class="drop-content">2학년</span>
+                  <span class="drop-icon"></span>
+                </a>
+                <ul class="drop-opt">
+                  <li>1학년</li>
+                  <li>2학년</li>
+                  <li>3학년</li>
+                  <li>4학년</li>
+                </ul>
+              </div>
+              <!-- // 학년 선택 드롭 박스 -->
+              <!-- 반 선택 드롭 박스 -->
+              <div class="dropdown class">
+                <a href="#" class="drop-btn">
+                  <span class="drop-content">1반</span>
+                  <span class="drop-icon"></span>
+                </a>
+                <ul class="drop-opt">
+                  <li>1반</li>
+                  <li>2반</li>
+                  <li>3반</li>
+                  <li>4반</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- // 학년 반 선택 -->
+          <!-- 미세 먼지 원형 그래프 -->
+          <div class="dustState">
+            <div class="fine">
+              <div class="pie">
+                <svg class="circle-container" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <linearGradient id="myGradient1">
+                    <stop offset="0%" />
+                    <stop class="deep" offset="60%" />
+                  </linearGradient>
+                  <circle class=" circle-container__progress1" r="14" cx="16" cy="16">
+                  </circle>
+                </svg>
+                <div class="pie-info">
+                  <strong class="air-state"></strong><br>
+                  <span class="font-blue air-state-num">47</span>
+                </div>
+              </div>
+
+              <div class="info">미세먼지 / <span style="font-weight: 700;">PM10</span></div>
+            </div>
+            <div class="ultra-fine">
+              <div class="pie">
+                <svg class="circle-container" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <linearGradient id="myGradient2">
+                    <stop offset="0%" />
+                    <stop class="deep" offset="60%" />
+                  </linearGradient>
+                  <circle class="circle-container__progress2" r="14" cx="16" cy="16">
+                  </circle>
+                </svg>
+                <div class="pie-info">
+                  <strong class="air-state"></strong><br>
+                  <span class="air-state-num">75</span>
+                </div>
+              </div>
+              <div class="info">초미세먼지 / <span style="font-weight: 700;">PM2.5</Span></div>
+            </div>
+          </div>
+          <!-- // 미세 먼지 원형 그래프 -->
+          <!-- 풍량 설정 -->
+          <div class="airControl">
+            <h2>설정</h2>
+            <!-- 풍량 설정 상세 정보 -->
+            <div class="control-box">
+              <ul>
+                <li class="con-item">
+                  <h3>급기풍량</h3>
+                  <span class="con-num">7</span>
+                  <span class="con-unit">CMH</span>
+
+                  <ul class="con-btn">
+                    <li class="con-minus">
+                      <span class="minus ir_pm">-</span>
+                    </li>
+                    <li class="con-plus">
+                      <span class="plus ir_pm">+</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="con-item">
+                  <h3>환기풍량</h3>
+                  <span class="con-num">20</span>
+                  <span class="con-unit">CMH</span>
+                  <ul class="con-btn">
+                    <li class="con-minus">
+                      <span class="minus ir_pm">-</span>
+                    </li>
+                    <li class="con-plus">
+                      <span class="plus ir_pm">+</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="con-item">
+                  <h3>VAV풍량</h3>
+                  <span class="con-num">99</span>
+                  <span class="con-unit">CMH</span>
+                  <ul class="con-btn">
+                    <li class="con-minus">
+                      <span class="minus ir_pm">-</span>
+                    </li>
+                    <li class="con-plus">
+                      <span class="plus ir_pm">+</span>
+                    </li>
+                  </ul>
+                </li>
+                <li class="last">
+                  <h3>환기장치</h3>
+                  <span class="con-num">OFF
+                  </span>
+                  <div class="con-switch">
+                    <h4 class="ir_su">환기 장치 온오프</h4>
+                    <input type="checkbox" id="switch1">
+                    <label for="switch1" id="sw"></label>
+                  </div>
+                </li>
+              </ul>
+              <!-- //풍량 설정 상세 정보 -->
+              <div class="control-btn">
+                <span class="btn-cancel">취소</span>
+                <span class="btn-apply">적용</span>
+              </div>
+            </div>
+          </div>
+          <!-- // 풍량 설정 -->
+        </section>
+        <section id="section03">
+          <!-- app 이동 문구 -->
+          <div class="content01">
+            <a href="./simulation_pc_nr.html">
+              <span class="title">에너지 절약 시뮬레이션 이동하기</span>
+              <span class="icon ir_su">이동</span>
+            </a>
+          </div>
+          <!-- // app 이동 문구 -->
+          <!-- AHU 상태 -->
+          <div class="content02">
+            <h3>AHU 상태</h2>
+              <ul>
+                <li>
+                  <span class="item_t">급기덕트풍량</span>
+                  <span class="item_n">27</span>
+                  <span class="item_u">CHM</span>
+                </li>
+                <li>
+                  <span class="item_t">급기온도</span>
+                  <span class="item_n">36.5</span>
+                  <span class="item_u">°C</span>
+                </li>
+                <li class="last">
+                  <span class="item_t">환기온도</span>
+                  <span class="item_n">36.2</span>
+                  <span class="item_u">°C</span>
+                </li>
+                <li>
+                  <span class="item_t">급기덕트정압</span>
+                  <span class="item_n">1</span>
+                  <span class="item_u">mmAq</span>
+                </li>
+                <li>
+                  <span class="item_t">급기습도</span>
+                  <span class="item_n">55.2</span>
+                  <span class="item_u">%</span>
+                </li>
+                <li class="last">
+                  <span class="item_t">환기습도</span>
+                  <span class="item_n">47.5</span>
+                  <span class="item_u">%</span>
+                </li>
+              </ul>
+          </div>
+          <!-- // ALU 상태 -->
+          <!-- 총 에너지 지표 -->
+          <div class="content03">
+            <h3>총 에너지</h3>
+            <ul>
+              <li>
+                <h4>생산 총 에너지</h4>
+                <span class="item_n">535.5</span>
+                <span class="item_u">kwh</span>
+                <span class="item_money">약 2,801원</span>
+              </li>
+              <li>
+                <h4>소비 총 에너지</h4>
+                <span class="item_n">483.0</span>
+                <span class="item_u">kwh</span>
+                <span class="item_money">약 2,801원</span>
+              </li>
+            </ul>
+          </div>
+          <!-- // 총 에너지 지표 -->
+        </section>
+      </main>
+    </div>
+
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./js/value.js"></script> <!-- 값 따라 css 변경 -->
+  <!-- <script src="./js/responsive.js"></script> -->
+  <script src="./js/pc.js"></script>
+
+</body>
+
+</html>

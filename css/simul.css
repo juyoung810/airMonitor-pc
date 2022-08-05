@@ -1,0 +1,500 @@
+body {
+  width: 67vw;
+  height: 87vh;
+  font-family: "Montserrat";
+  font-style: normal;
+  overflow: auto;
+  /* background: pink; */
+}
+header {
+  width: 68vw;
+  height: 8.6vh;
+  background: linear-gradient(
+    127.67deg,
+    rgba(255, 255, 255, 0.108) 20.99%,
+    rgba(255, 255, 255, 0.0297) 74.75%
+  );
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+  overflow: hidden;
+
+  text-align: justify;
+}
+/* text-align : justify 위해 */
+header::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+header h2 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.4vw;
+  line-height: 8.6vh;
+  margin-left: 2vw;
+  color: #ffffff;
+  overflow: hidden;
+}
+header > a {
+  display: inline-block;
+  /* width: 10vw; */
+  height: inherit;
+
+  cursor: pointer;
+  border-radius: 20px;
+  /* float: right; */
+  /* overflow: hidden; */
+  /* margin-right: 27px; */
+  font-weight: 400;
+  font-size: 1.4vw;
+  /* identical to box height */
+  color: #ffffff;
+  line-height: 8.6vh;
+  overflow: hidden;
+}
+/* header > a .back {
+  display: inline-block;
+} */
+header > a .back_icon {
+  display: inline-block;
+  background: url(../img/Vector\ 338.png) center no-repeat;
+  background-size: contain;
+  width: 1vw;
+  height: 1.4vh;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-right: 1.5vw;
+}
+#simul-con {
+  float: left;
+  width: 32vw;
+  height: 42vh;
+
+  margin: 1.6vh 0.9vw 1.6vh 0;
+  background: linear-gradient(
+    127.67deg,
+    rgba(255, 255, 255, 0.108) 20.99%,
+    rgba(255, 255, 255, 0.0297) 74.75%
+  );
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+}
+#simul-trans {
+  float: left;
+  margin-top: 1.6vh;
+  margin-bottom: 1.6vh;
+  width: 35vw;
+  height: 42vh;
+
+  background: linear-gradient(
+    127.67deg,
+    rgba(255, 255, 255, 0.108) 20.99%,
+    rgba(255, 255, 255, 0.0297) 74.75%
+  );
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+}
+#simul-result {
+  width: 100%;
+  height: 33vh;
+  float: left;
+  background: linear-gradient(
+    127.67deg,
+    rgba(255, 255, 255, 0.108) 20.99%,
+    rgba(255, 255, 255, 0.0297) 74.75%
+  );
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.28);
+  border-radius: 20px;
+}
+/* 시뮬레이션 조절 */
+#simul-con ul {
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+#simul-con li {
+  height: 6vh;
+  margin-top: 3vh;
+}
+#simul-con li:first-child {
+  margin-top: 3vh;
+}
+#simul-con .con-info {
+  display: block;
+  text-align: justify;
+}
+#simul-con .con-info::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+#simul-con .con-info h5 {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 2.6vh;
+  /* identical to box height */
+  color: #ffffff;
+}
+#simul-con .con-info span {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 2.6vh;
+  /* identical to box height */
+  /* word-spacing: 0.4px; */
+  color: #00d1ff;
+}
+#simul-con .con-info span .con-re-num {
+  font-weight: 700;
+}
+.silder-container {
+  width: 100%;
+}
+#simul-con li .slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  width: 100%;
+  height: 1vh;
+  background: linear-gradient(
+    to right,
+    #00d1ff 0%,
+    #00d1ff 30%,
+    #003662 30%,
+    #003662 100%
+  );
+  border-radius: 6px;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  transition: 450ms ease-in;
+}
+#simul-con li .slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 1.5vw;
+  height: 2.6vh;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#simul-con li .slider::-moz-range-thumb {
+  width: 1.5vw;
+  height: 2.6vh;
+  background: #ffffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#simul-con li .slider::-moz-range-track {
+  background: #00d1ff;
+}
+#simul-con .con-btn {
+  height: 5vh;
+  width: 100%;
+  margin-bottom: 3vh;
+  margin-top: 6.8vh;
+  text-align: right;
+}
+#simul-con .con-btn .con-clr {
+  width: 7vw;
+  height: 5vh;
+
+  border: 1px solid #ffffff;
+  background: none;
+  border-radius: 8px;
+  margin-right: 0.6vw;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 5vh;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+#simul-con .con-btn .con-apply {
+  width: 9vw;
+  height: 5vh;
+
+  background: #ffffff;
+  border-radius: 8px;
+  margin-right: 1.5vw;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 5vh;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #334778;
+}
+/* 에너지 전환 */
+#simul-trans h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 3vh;
+  /* identical to box height */
+
+  color: #ffffff;
+
+  margin: 2.6vh 0 3.3vh 1.5vw;
+}
+#simul-trans ul {
+  width: 32vw;
+  margin: 0 1.5vw 0 1.5vw;
+  overflow: hidden;
+}
+#simul-trans li {
+  float: left;
+  width: 15.5vw;
+  height: 14vh;
+
+  background: linear-gradient(
+    144.06deg,
+    rgba(255, 255, 255, 0.16) -24.88%,
+    rgba(255, 255, 255, 0.0304) 84.81%
+  );
+  border-radius: 8px;
+  margin-right: 1vw;
+  margin-bottom: 1.3vh;
+}
+#simul-trans li.cons {
+  margin-right: 0;
+}
+#simul-trans li h4 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2.2vh;
+  /* identical to box height */
+
+  color: #ffffff;
+  margin-top: 1.6vh;
+  margin-left: 1vw;
+}
+#simul-trans li div {
+  width: 13vw;
+  height: 5vh;
+  border-radius: 20px;
+  margin: 3vh 1vw 2vh 1vw;
+  text-align: right;
+}
+#simul-trans li div span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 5vh;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #ffffff;
+  margin-right: 1vw;
+}
+#simul-trans li.proc div {
+  background: linear-gradient(90deg, #2d9cdb 0%, #006caa 100%);
+}
+#simul-trans li.cons div {
+  background: linear-gradient(90deg, #f2994a 0%, #f2724a 100%);
+}
+
+/***  시뮬레이션 결과 ***/
+#simul-result .result1 {
+  float: left;
+  width: 24vw;
+  height: 28vh;
+  margin: 3vh 0 4vh 1.5vw;
+  /* background: #000; */
+}
+#simul-result .result1 h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 3vh;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+#simul-result .result1 ul {
+  margin-top: 3.6vh;
+}
+#simul-result .result1 li {
+  text-align: justify;
+  margin-bottom: 2.6vh;
+  height: 5vh;
+}
+#simul-result .result1 li::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+#simul-result .result1 li:last-child {
+  margin-bottom: 0;
+}
+
+#simul-result .result1 span {
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 5vh;
+  color: #ffffff;
+}
+#simul-result .result1 div {
+  display: inline-block;
+  width: 16vw;
+  height: 5vh;
+  background: linear-gradient(90deg, #f2994a 0%, #f2724a 100%);
+  border-radius: 20px;
+  text-align: right;
+}
+#simul-result .result1 li:last-child div {
+  background: linear-gradient(90deg, #eb5757 0%, #c72929 100%);
+}
+#simul-result .result1 div span {
+  font-weight: 700;
+  font-size: 1.2vw;
+  line-height: 5vh;
+  /* identical to box height */
+
+  text-align: right;
+
+  color: #ffffff;
+  margin-right: 28px;
+}
+#simul-result .result2 {
+  float: left;
+  height: inherit;
+  margin-left: 5vw;
+  margin-right: 1vw;
+  width: 27vw;
+  overflow: hidden;
+  /* background: white; */
+}
+
+/* 결과 원형 그래프 */
+#simul-result .result2 .re-pie {
+  float: left;
+  /* margin-left: 23.14px; */
+  margin-top: 6vh;
+  margin-bottom: 2.5vh;
+  width: 13vw;
+  height: 24vh;
+
+  overflow: visible;
+  text-align: center;
+}
+#simul-result .result2 .pie-container {
+  display: inline-block;
+  width: 13vw;
+  height: 16vh;
+  /* background: #000; */
+  position: relative;
+  text-align: center;
+}
+#simul-result .result2 .re-pie-info {
+  position: absolute;
+  /* transform: rotate(90deg); */
+  top: 5vh;
+  left: 4.7vw;
+  text-align: center;
+}
+#simul-result .result2 .re-pie-info .air-state-num {
+  display: block;
+  font-weight: 700;
+  font-size: 2vw;
+  /* line-height: 4vh; */
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #97b7ff;
+}
+#simul-result .result2 .re-pie-info .air-state {
+  margin-top: 0.4vh;
+  display: block;
+  font-weight: 500;
+  font-size: 1vw;
+  /* line-height: 2.6vh; */
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+#simul-result .result2 .re-info {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.1vw;
+  line-height: 2.3vh;
+  text-align: center;
+
+  color: #ffffff;
+  margin-top: 1.8vh;
+  width: 100%;
+  vertical-align: bottom;
+}
+/* 그래프 색 설명 */
+#simul-result .result3 {
+  float: left;
+  width: 6vw;
+  height: 7vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 2.6vh;
+  margin-right: 0.8vw;
+}
+#simul-result .result3 li {
+  display: block;
+  width: 5.3vw;
+  height: 2vh;
+  text-align: center;
+  margin: 1vh 0.4vw 0 0.4vw;
+  overflow: hidden;
+}
+#simul-result .result3 .pie-color {
+  display: inline-block;
+  width: 2vw;
+  height: 2vh;
+  margin-right: 0.4vw;
+  background: #c5d6ef;
+  border-radius: 4px;
+}
+#simul-result .result3 li:last-child .pie-color {
+  background: #213c7c;
+}
+#simul-result .result3 .pie-info {
+  display: inline-block;
+  /* height: 2vh; */
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2vh;
+  /* identical to box height */
+  color: #ffffff;
+  vertical-align: top;
+}
+
+.circle-container2 .circle {
+  display: inline-block;
+  width: 9vw;
+  height: 9.5vh;
+  margin-top: 4vh;
+  background: conic-gradient(
+    #213c7c 0% 45%,
+    #c5d6ef 45% 60%,
+    rgba(0, 0, 0, 0) 60% 100%
+  );
+  border-radius: 50%;
+  transform: rotate(90deg);
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 13px),
+    #000 calc(100% - 13px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    #0000 calc(99% - 13px),
+    #000 calc(100% - 13px)
+  );
+}
+/* .circle-container2 .circle::before {
+  width: 120px;
+  height: 120px;
+  background: red;
+} */

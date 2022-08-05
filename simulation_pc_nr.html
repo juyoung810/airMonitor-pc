@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실외 공기질 모니터</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="./css/simul.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/circle.css" />
+    <link rel="stylesheet" href="./css/state.css" />
+    <!-- 웹 폰트 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h2>서울 초등학교</h2>
+      <a href="./pc_nr.html"
+        >홈으로 돌아가기<span class="back_icon ir_pm">돌아가기 버튼</span></a
+      >
+    </header>
+    <!-- 시뮬레이션 조절 -->
+    <section id="simul-con">
+      <ul>
+        <li>
+          <div class="con-info">
+            <h5>초미세먼지(PM2.5)</h5>
+            <span><span class="con-re-num">47</span>㎍/㎥</span>
+          </div>
+          <div class="slider-container">
+            <input class="slider" type="range" value="47" min="0" max="100" />
+          </div>
+        </li>
+        <li>
+          <div class="con-info">
+            <h5>온도</h5>
+            <span><span class="con-re-num">16</span>°C</span>
+          </div>
+          <div class="slider-container">
+            <input class="slider" type="range" value="16" min="0" max="100" />
+          </div>
+        </li>
+        <li>
+          <div class="con-info">
+            <h5>이산화탄소(CO2)</h5>
+            <span><span class="con-re-num">415</span>ppm</span>
+          </div>
+          <div class="slider-container">
+            <input class="slider" type="range" value="415" min="0" max="1000" />
+          </div>
+        </li>
+      </ul>
+      <div class="con-btn">
+        <button class="con-clr">초기화</button>
+        <button class="con-apply">시뮬레이션</button>
+      </div>
+    </section>
+    <!-- //시뮬레이션 조절 -->
+    <!-- 시뮬레이션 전환 에너지 -->
+    <section id="simul-trans">
+      <h3>현재 에너지 전한</h3>
+      <ul>
+        <li class="proc">
+          <h4>생산에너지</h4>
+          <div><span>535.5 kwh</span></div>
+        </li>
+        <li class="cons">
+          <h4>소비에너지</h4>
+          <div><span>535.5 kwh</span></div>
+        </li>
+        <li class="proc">
+          <h4>생산비용</h4>
+          <div><span>65,315 원</span></div>
+        </li>
+        <li class="cons">
+          <h4>소비비용</h4>
+          <div><span>65,315 원</span></div>
+        </li>
+      </ul>
+    </section>
+    <!-- // 시뮬레이션 전환 에너지 -->
+    <!-- 시뮬레이션 결과 -->
+    <section id="simul-result">
+      <div class="result1">
+        <h3>시뮬레이션 결과</h3>
+        <ul>
+          <li>
+            <span>소비에너지</span>
+            <div><span>535.5 kwh</span></div>
+          </li>
+          <li>
+            <span>소비비용</span>
+            <div><span>65,315 원</span></div>
+          </li>
+          <li>
+            <span style="word-spacing: -20px">총 절약비용</span>
+            <div><span>65,315 원</span></div>
+          </li>
+        </ul>
+      </div>
+      <!-- 결과 원형 그래프 -->
+      <div class="result2">
+        <div class="re-pie">
+          <!-- <div class="circle-container2"> -->
+          <div class="pie-container">
+            <svg
+              class="circle-container2"
+              viewBox="0 0 127 127"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="circle-container__progress3"
+                cx="63.5"
+                cy="63.5"
+                r="57"
+                style="stroke-dashoffset: 142"
+              >
+                <!-- 354 - 354의 n퍼센트 -->
+              </circle>
+              <circle
+                class="circle-container__progress4"
+                cx="63.5"
+                cy="63.5"
+                r="57"
+                style="stroke-dashoffset: 214"
+              >
+                <!-- 354 - 354의 n퍼센트 -->
+              </circle>
+            </svg>
+            <div class="re-pie-info">
+              <strong class="air-state-num">15%</strong>
+              <span class="air-state">절약</span>
+            </div>
+          </div>
+
+          <div class="re-info">에너지 절약률</div>
+        </div>
+        <div class="re-pie">
+          <div class="pie-container">
+            <svg
+              class="circle-container2"
+              viewBox="0 0 127 127"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="circle-container__progress3"
+                cx="63.5"
+                cy="63.5"
+                r="57"
+                style="stroke-dashoffset: 142"
+              ></circle>
+              <circle
+                class="circle-container__progress4"
+                cx="63.5"
+                cy="63.5"
+                r="57"
+                style="stroke-dashoffset: 214"
+              ></circle>
+            </svg>
+            <div class="re-pie-info">
+              <strong class="air-state-num">36%</strong>
+              <span class="air-state">절감</span>
+            </div>
+          </div>
+          <div class="re-info">비용 절감율</div>
+        </div>
+      </div>
+      <!-- // 결과 원형 그래프 -->
+      <div class="result3">
+        <ul>
+          <li>
+            <span class="pie-color"></span><span class="pie-info">적용전</span>
+          </li>
+          <li>
+            <span class="pie-color"></span><span class="pie-info">적용후</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- // 시뮬레이션 결과 -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./js/value.js"></script>
+    <!-- 값 따라 css 변경 -->
+    <script src="./js/pc.js"></script>
+  </body>
+</html>

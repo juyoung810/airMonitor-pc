@@ -1,0 +1,63 @@
+.circle-container {
+  display: block;
+  width: 11.71vw;
+  height: 17vh;
+  margin-top: 1vh;
+  background: url(../img/Ellipse\ 41.svg) no-repeat center;
+  background-size: contain;
+  float: left;
+  /* text-align: center; */
+  position: relative;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.circle-container__progress1 {
+  fill: none;
+  stroke-linecap: round;
+  stroke: url(#myGradient1);
+  /* stroke-dasharray: 100 100; */
+  stroke-linecap: round;
+  stroke-width: 4.6px;
+  stroke-dasharray: 88 100;
+}
+.circle-container__progress2 {
+  fill: none;
+  stroke-linecap: round;
+  stroke: url(#myGradient2);
+  stroke-dasharray: 88 100; /* 2 * PI * r */
+  stroke-linecap: round;
+  stroke-width: 4.6px;
+  /* // For animations...
+  // transition: stroke-dashoffset 1s ease-in-out;
+  // will-change: transform; */
+}
+
+.circle-container2 {
+  display: inline-block;
+  width: 9.3vw;
+  height: 16vh;
+  /* margin-top: 3vh; */
+  /*  margin-left: 23.14px; */
+  background: url(../img/Ellipse_2.svg) no-repeat center;
+  background-size: contain;
+  /* float: left; */
+  text-align: center;
+  overflow: visible;
+  transform: rotate(-90deg);
+}
+
+.circle-container__progress3 {
+  fill: none;
+  stroke-width: 13px;
+  stroke-dasharray: 358 1000;
+  fill: none;
+  stroke: #c5d6ef;
+}
+.circle-container__progress4 {
+  fill: none;
+  stroke-width: 14.5px;
+  stroke-dasharray: 358 1000;
+  fill: none;
+  stroke: #213c7c;
+}
