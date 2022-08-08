@@ -439,20 +439,24 @@ header > a .back_icon {
   border-radius: 8px;
   margin-top: 2.6vh;
   margin-right: 0.8vw;
+  overflow: hidden;
 }
 #simul-result .result3 li {
-  display: block;
-  width: 5.3vw;
+  display: inline-block;
+  width: 6vw;
   height: 2vh;
   text-align: center;
-  margin: 1vh 0.4vw 0 0.4vw;
+  margin-top: 1vh;
+  /* margin: 1vh 0.25vw 0 0.25vw; */
   overflow: hidden;
+  /* vertical-align: middle; */
+  line-height: 2vh;
 }
 #simul-result .result3 .pie-color {
   display: inline-block;
-  width: 2vw;
-  height: 2vh;
-  margin-right: 0.4vw;
+  width: 1.8vw;
+  height: 1.8vh;
+  margin-right: 0.35vw;
   background: #c5d6ef;
   border-radius: 4px;
 }
@@ -461,13 +465,11 @@ header > a .back_icon {
 }
 #simul-result .result3 .pie-info {
   display: inline-block;
-  /* height: 2vh; */
   font-weight: 500;
-  font-size: 12px;
-  line-height: 2vh;
-  /* identical to box height */
+  font-size: 0.9vw;
   color: #ffffff;
-  vertical-align: top;
+  vertical-align: middle;
+  margin-top: -0.7vh;
 }
 
 .circle-container2 .circle {
@@ -498,3 +500,14 @@ header > a .back_icon {
   height: 120px;
   background: red;
 } */
+@media (max-width: 830px) {
+  #simul-result .result3 .pie-color {
+    width: 1vw;
+    height: 1.5vh;
+    margin-right: 0.2vw;
+  }
+  #simul-result .result3 .pie-info {
+    font-size: 0.5vw;
+    margin-top: -0.5vh;
+  }
+}

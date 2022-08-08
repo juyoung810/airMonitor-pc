@@ -556,8 +556,6 @@ main {
 }
 /* app 이동 문구 */
 #section03 .content01 {
-  width: 34vw;
-  height: 6.9vh;
   margin-top: 0.07vh;
   background: linear-gradient(
     127.67deg,
@@ -582,16 +580,15 @@ main {
   display: inline-block;
   width: 100%;
 }
-#section03 .content01 span.title {
+#section03 .content01 .title {
   display: inline-block;
-  width: 16vw;
   margin-left: 2vw;
-  margin-right: 13vw;
   font-weight: 700;
   color: white;
-  font-size: 1.15vw;
+  font-size: 1vw;
 
   line-height: 6.9vh;
+  overflow: hidden;
 }
 #section03 .content01 span.icon {
   display: inline-block;
@@ -599,7 +596,7 @@ main {
   background-size: contain; /*  지정된 크기에 꽉차게 */
   width: 1vw;
   height: 1.5vh;
-  margin: 2.6vh 0 2.6vh 0;
+  margin: 2.6vh 2vw 2.6vh 0;
 }
 
 /* AHU 상태판  */
