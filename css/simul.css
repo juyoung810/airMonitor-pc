@@ -434,28 +434,39 @@ header > a .back_icon {
 #simul-result .result3 {
   float: left;
   width: 6vw;
-  height: 7vh;
+  /* height: 7vh;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   margin-top: 2.6vh;
   margin-right: 0.8vw;
   overflow: hidden;
+  text-align: center; */
+}
+#simul-result .result3 ul {
+  display: block;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-top: 2.6vh;
+  margin-right: 0.8vw;
+  overflow: hidden;
+  text-align: center;
 }
 #simul-result .result3 li {
   display: inline-block;
-  width: 6vw;
-  height: 2vh;
+  width: 5.3vw;
+  height: 15px;
   text-align: center;
-  margin-top: 1vh;
+  margin-top: 10px;
   /* margin: 1vh 0.25vw 0 0.25vw; */
   overflow: hidden;
   /* vertical-align: middle; */
-  line-height: 2vh;
+  line-height: 15px;
 }
 #simul-result .result3 .pie-color {
   display: inline-block;
-  width: 1.8vw;
-  height: 1.8vh;
+  width: 2vw;
+  height: 15px;
   margin-right: 0.35vw;
   background: #c5d6ef;
   border-radius: 4px;
@@ -469,7 +480,9 @@ header > a .back_icon {
   font-size: 0.9vw;
   color: #ffffff;
   vertical-align: middle;
-  margin-top: -0.7vh;
+  /* margin-top: -0.7vh; */
+  /* line-height: 15px; */
+  margin-top: -6px;
 }
 
 .circle-container2 .circle {
@@ -503,11 +516,9 @@ header > a .back_icon {
 @media (max-width: 830px) {
   #simul-result .result3 .pie-color {
     width: 1vw;
-    height: 1.5vh;
     margin-right: 0.2vw;
   }
   #simul-result .result3 .pie-info {
-    font-size: 0.5vw;
-    margin-top: -0.5vh;
+    font-size: 0.3vw;
   }
 }
