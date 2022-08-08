@@ -117,10 +117,10 @@
               <div class="pie">
                 <svg class="circle-container" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <linearGradient id="myGradient1">
-                    <stop offset="0%" />
-                    <stop class="deep" offset="60%" />
+                    <stop offset=" 30%" />
+                    <stop class="deep" offset="90%" />
                   </linearGradient>
-                  <circle class=" circle-container__progress1" r="14" cx="16" cy="16">
+                  <circle class=" circle-container__progress1" r="14" cx="16" cy="16" style="stroke-dashoffset:20">
                   </circle>
                 </svg>
                 <div class="pie-info">
@@ -135,8 +135,8 @@
               <div class="pie">
                 <svg class="circle-container" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                   <linearGradient id="myGradient2">
-                    <stop offset="0%" />
-                    <stop class="deep" offset="60%" />
+                    <stop offset="60%" />
+                    <stop class="deep" offset="100%" />
                   </linearGradient>
                   <circle class="circle-container__progress2" r="14" cx="16" cy="16">
                   </circle>
@@ -189,9 +189,18 @@
                   <span class="con-unit">CMH</span>
                   <ul class="con-btn">
                     <li class="con-minus">
+                      <!-- <svg class="minus" width="12" height="2" viewBox="0 0 12 2" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L12 1" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg> -->
                       <span class="minus ir_pm">-</span>
                     </li>
                     <li class="con-plus">
+                      <!-- <svg class="plus" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6L12 6" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        <path d="M6 1L6 12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                      </svg> -->
                       <span class="plus ir_pm">+</span>
                     </li>
                   </ul>
@@ -287,6 +296,22 @@
 
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript">
+    $("#switch1").click(function handleSwClick() {
+      if ($(this).is(':checked')) {
+        $(".airControl .control-box li.last .con-num").text("ON");
+      } else {
+        $(".airControl .control-box li.last .con-num").text("OFF");
+      }
+    });
+    // sm_btn.addEventListener("click", handleClick);
+
+    $("#section03 .content01 a").click(function (e) {
+      e.preventDefault();
+      $("#wrap #container main").load($(this).attr("href"));
+    });
+
+  </script> -->
   <script src="./js/value.js"></script> <!-- 값 따라 css 변경 -->
   <!-- <script src="./js/responsive.js"></script> -->
   <script src="./js/pc.js"></script>
